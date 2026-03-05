@@ -5,7 +5,7 @@ This project refined my understanding of the Go file system(fs) API and deepened
 
 This project is about building *a simple text completion/editing/auto-corection tool* that will recieve as arguments the name of a file containing a text that needs some modifications (the input) and the name of the file the modified text should be placed in (the output).
 
-Here are the list of possible modifications that the program will execute:
+**Here are the list of possible modifications that the program will execute:**
 
 * Every instance of (`hex`) should replace the word before with the decimal version of the word (in this case the word will always be a hexadecimal number). (Ex: "1E (hex) were added" -> "30 files were added")
 
