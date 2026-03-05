@@ -5,28 +5,30 @@ import (
 	"strings"
 )
 
-func handleHexAndBin(text string, tag string, base int) string {
-	/*
-	Takes in a string and searches for the word hex, and converts
-	the number before it to decimal number
-	*/
-
-	// Use the parseInt() function to convert
+func handleHexAndBin(text string) string {
 	words := strings.Split(text, " ")
 
 	for i := 0; i < len(words); i++ {
-		// scans for (hex) and makes sure there's a word before it
-		if words[i] == tag && i > 0 {
-			// convert previous word from hex to decimal
+		// check for hex
+		if words[i] == "(hex)" && i > 0 {
 			num, err := strconv.ParseInt(words[i-1], 16, 64)
 			if err == nil {
-				// converts the number back to int
 				words[i-1] = strconv.FormatInt(num, 10)
 			}
-
-			// remove "(hex)"
 			words = append(words[:i], words[i+1:]...)
+			i--
+		}
+
+		// check for bin
+		if words[i] == "(bin)" && i > 0 {
+			num, err := strconv.ParseInt(words[i-1], 2, 64)
+			if err == nil {
+				words[i-1] = strconv.FormatInt(num, 10)
+			}
+			words = append(words[:i], words[i+1:]...)
+			i--
 		}
 	}
+
 	return strings.Join(words, " ")
 }
