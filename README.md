@@ -1,8 +1,6 @@
 # go-reloaded
 
 ## Project Description
-This project refined my understanding of the Go file system(fs) API and deepened my skills in string and number manipulations.
-
 This project is about building *a simple text completion/editing/auto-corection tool* that will recieve as arguments the name of a file containing a text that needs some modifications (the input) and the name of the file the modified text should be placed in (the output).
 
 **Here are the list of possible modifications that the program will execute:**
