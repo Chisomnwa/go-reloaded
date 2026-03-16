@@ -2,7 +2,7 @@ package functions
 
 import "strings"
 
-func fixAtoAn(text string) string {
+func FixAtoAn(text string) string {
 	words := strings.Split(text, " ")
 
 	for i := 0; i < len(words)-1; i++ {

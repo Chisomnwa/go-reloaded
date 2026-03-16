@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func handleHexAndBin(text string) string {
+func HandleHexAndBin(text string) string {
 	words := strings.Split(text, " ")
 
 	for i := 0; i < len(words); i++ {

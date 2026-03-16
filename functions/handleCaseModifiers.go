@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func handleCaseModifiers(text string) string {
+func HandleCaseModifiers(text string) string {
 	words := strings.Split(text, " ")
 
 	for i := 0; i < len(words); i++ {

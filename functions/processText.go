@@ -1,10 +1,10 @@
 package functions
 
 func ProcessText(text string) string {
-	text = handleHexAndBin(text)
-	// text = handleCaseModifiers(text)
-	// text = fixPunctuation(text)
-	// text = fixAtoAn(text)
+	text = HandleHexAndBin(text)
+	text = HandleCaseModifiers(text)
+	text = FixPunctuation(text)
+	text = FixAtoAn(text)
 
 	return text
 }

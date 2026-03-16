@@ -2,7 +2,7 @@ package functions
 
 import "strings"
 
-func fixPunctuation(text string) string {
+func FixPunctuation(text string) string {
 	words := strings.Split(text, " ")
 	var result []string
 
